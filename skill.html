@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Skills</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-color: #f5f5f5;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --footer-bg: #333;
+      --footer-text: #fff;
+    }
+
+    body.dark {
+      --bg-color: #0d1117;
+      --text-color: #f5f5f5;
+      --card-bg: #161b22;
+      --footer-bg: #161b22;
+      --footer-text: #ccc;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .skill-card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+
+    .skill-card i {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-card h3 {
+      margin: 0.5rem 0;
+    }
+
+    .skill-card p {
+      font-size: 0.9rem;
+      color: var(--text-color);
+    }
+
+    footer {
+      
+      color:black;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: yellow;
+      color:black;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <main>
+    <h1>My Skills</h1>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fab fa-html5" style="color:#e34c26;"></i>
+        <h3>HTML</h3>
+        <p>Markup language for web content.</p>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-css3-alt" style="color:#264de4;"></i>
+        <h3>CSS</h3>
+        <p>Style and layout for web pages.</p>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-js" style="color:#f0db4f;"></i>
+        <h3>JavaScript</h3>
+        <p>Interactive features and logic.</p>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-database" style="color:#00618a;"></i>
+        <h3>MySQL</h3>
+        <p>Database management system.</p>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-php" style="color:#8993be;"></i>
+        <h3>PHP</h3>
+        <p>Server-side web scripting.</p>
+      </div>
+      <div class="skill-card">
+        <i class="fab fa-python" style="color:#3776ab;"></i>
+        <h3>Python</h3>
+        <p>General-purpose programming.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Nisha Thorat. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
