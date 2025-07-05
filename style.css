@@ -142,18 +142,6 @@ body {
   color:white;
 }
 
-
-.portfolio-section {
-  background-color: #f0f0f0;
-  padding: 2rem;
-  border-radius: 12px;
-  margin-top: 2rem;
-}
-
-.dark-theme .portfolio-section {
-  background-color: #1e1e1e;
-}
-
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
